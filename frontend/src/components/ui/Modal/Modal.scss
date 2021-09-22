@@ -1,0 +1,237 @@
+@import "~styles/_variables.scss";
+
+.backdrop {
+  z-index: 99;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0.8;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.backdrop.show {
+  visibility: visible;
+  animation: 0.3s ease-out forwards backdrop-show;
+}
+
+.backdrop.hide {
+  animation: 0.3s ease-out forwards backdrop-hide;
+}
+
+.modal {
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: 0 auto;
+  background-color: $mainFgColor;
+  max-width: none;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  padding-bottom: 2rem;
+  overflow-y: auto;
+  animation: 0.3s ease-out forwards modal-show;
+}
+
+.modal.hide {
+  animation: 0.3s ease-out forwards modal-hide;
+}
+
+.modal__header {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  padding: 0 0.8rem;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  background-color: #fafafa;
+}
+
+.modal-content-container {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.modal__div--header {
+  padding: 0.5rem;
+}
+.modal-header__div--content.modal__div--header {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.modal-header__heading,
+.modal-header__heading.modal__heading {
+  display: block;
+  width: 100%;
+}
+.modal-header__heading.modal__heading {
+  position: relative;
+}
+.modal__heading,
+.modal__modal-p {
+  display: block;
+  width: 100%;
+  color: $mainBlack;
+  height: fit-content;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+.modal__heading {
+  text-transform: none;
+  font-size: 1.25rem;
+}
+
+.modal-header.close-button__div {
+  position: relative;
+  left: 0.8rem;
+}
+
+.modal__modal-p {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 25rem;
+  margin: 0 auto;
+}
+.modal__modal-p.small-text {
+  font-size: 0.95rem;
+}
+
+.modal__modal-p.danger {
+  color: $dangerTextColor;
+}
+
+.modal__modal-p.enlarged-text {
+  margin: 1rem auto;
+  font-size: 1.3rem;
+  color: $mainBlack;
+  font-weight: 700;
+}
+
+.modal__modal-p.centered {
+  text-align: center;
+}
+
+.modal__div--content {
+  padding: 0.5rem;
+  padding-top: 3.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop.mobile-only {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-height: 600px) {
+  .modal {
+    width: fit-content;
+    height: auto;
+    min-height: 0;
+    min-width: 32rem;
+    max-height: 95vh;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding-top: 3rem;
+    padding-bottom: 0;
+    overflow-y: hidden;
+  }
+
+  .modal form {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .modal__header {
+    border-bottom: none;
+    background-color: #0000;
+  }
+
+  .modal__header,
+  .modal__header.settings-page-sidebar-header {
+    position: fixed;
+    margin: 0;
+  }
+  .form__div--content.modal__div--content {
+    min-height: 0;
+    height: auto;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  .modal-header__div--content.modal__div--header {
+    justify-content: space-between;
+  }
+  .modal-header__heading.modal__heading {
+    right: 0;
+  }
+
+  .modal__div--content {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@keyframes backdrop-show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes backdrop-hide {
+  0% {
+    opacity: 0.8;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes modal-show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-hide {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

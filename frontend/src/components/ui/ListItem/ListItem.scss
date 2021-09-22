@@ -1,0 +1,11 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 2.8rem;
+  border-bottom: 1px solid #0002;
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
