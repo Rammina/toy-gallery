@@ -134,7 +134,7 @@ export const deleteToy =
     console.log(toyId);
     axios
       .delete(
-        `https://toy-gallery.herokuapp.com//api/toys/${toyId}`,
+        `https://toy-gallery.herokuapp.com/api/toys/${toyId}`,
         //required when sending data using delete method
         { data: { userId } }
       )
