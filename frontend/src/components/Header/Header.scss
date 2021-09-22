@@ -1,0 +1,63 @@
+@import "~styles/_variables";
+@import "~styles/_config.scss";
+
+.header {
+  z-index: 30;
+  background-color: $primaryColorDimTranslucent;
+  color: $mainWhite;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 3.75rem;
+  width: 100vw;
+  padding: 0 0.8rem;
+  border-bottom: 1px solid #0002;
+  box-shadow: 0 0 5px 0 #0005;
+}
+.header__section {
+  display: flex;
+  align-items: center;
+  //TODO:  I don't feel like doing math right now
+  height: 3.75rem;
+  margin: 0 auto;
+}
+.header__div {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  height: 3rem;
+}
+#header__website-title-div {
+}
+#header__title-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  filter: $whiteIconImageFilter;
+}
+#header__title-link {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.35rem;
+  height: 3.75rem;
+  line-height: 3.75rem;
+  &:hover {
+    background-color: #0001;
+  }
+}
+
+@include media-md {
+  .header {
+    padding: 0 1.5rem;
+  }
+}
+
+@include media-lg {
+  .header {
+    padding: 0 5.5%;
+  }
+  .header__div.header__div--navmenu {
+    margin-left: auto;
+  }
+}
