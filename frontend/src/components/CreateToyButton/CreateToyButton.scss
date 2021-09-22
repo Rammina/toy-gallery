@@ -1,0 +1,25 @@
+@import "~styles/_variables";
+@import "~styles/_config";
+
+//TODO: put an image here later
+.btn.btn--create {
+  display: flex;
+  align-items: center;
+  min-height: 2.8rem;
+  min-width: 10rem;
+  background-color: $primaryColor;
+  color: $mainWhite;
+  padding: 0rem 1.2rem;
+  margin: 0 auto;
+  border-radius: 33px;
+  font-size: 1.15rem;
+  &:hover {
+    background-color: $primaryColorDim;
+  }
+}
+.toy-list-page__create.img--btn {
+  margin-right: 0.7rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  filter: $whiteIconImageFilter;
+}
