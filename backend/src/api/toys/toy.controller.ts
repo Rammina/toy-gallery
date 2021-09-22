@@ -32,7 +32,7 @@ export const getToyList = async (ctx: Context) => {
       let sortOrderNumber = sortOrder === 'asc' ? 1 : -1;
       // The order in which you assign parameters matters for its priority
       sortQuery[sortPropName as string] = sortOrderNumber;
-      sortQuery.name = 1;
+      if (sortPropName !== 'name') sortQuery.name = 1;
     } else {
       sortQuery = { date_posted: -1, name: 1 }; //default nested sort
     }
