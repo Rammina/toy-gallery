@@ -1,0 +1,54 @@
+@import "~styles/_variables";
+@import "~styles/_config";
+
+.toy-list-page__section,
+.toy-list-page__p,
+.toy-list-page__h {
+  max-width: $contentAreaMaxWidth;
+}
+
+.toy-list-page__ {
+  &p {
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+  }
+  &section {
+    padding: 1rem 0;
+    margin: 0 auto;
+    &--action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1rem;
+    }
+  }
+  &ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@include media-md {
+  .toy-list-page__p {
+    padding: 0;
+  }
+}
+
+@include media-lg {
+  .toy-list-page__ {
+    &section--action {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 2rem;
+      margin-top: 0;
+    }
+    &create.btn.btn--create {
+      margin: 0 1rem;
+    }
+  }
+}

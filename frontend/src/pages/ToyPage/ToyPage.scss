@@ -1,0 +1,201 @@
+@import "~styles/_variables";
+@import "~styles/_config";
+
+.toy-page__ {
+  &h1 {
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0;
+  }
+  &h2--franchise {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  &image {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    display: block;
+    width: 88vw;
+    max-width: 32rem;
+    max-height: 18rem;
+    height: 49.5vw;
+    border-radius: 5px;
+    box-shadow: 0 0 1px #aaa;
+    object-fit: cover;
+    object-position: 50% 0;
+  }
+  &actions-container {
+    border-top: 1px solid #0006;
+    box-shadow: none;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+  &button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 0.75rem;
+    width: 100%;
+    min-width: 12rem;
+    max-width: 25rem;
+    background-color: #0000;
+    color: $secondaryBlack;
+    border: 1px solid $secondaryBlack;
+    border-radius: 33px;
+    &:hover {
+      background-color: #0001;
+    }
+    &.danger {
+      margin-top: 0.75rem;
+      background-color: $dangerBackgroundColor;
+      color: $mainWhite;
+      border: none;
+
+      &:hover {
+        background-color: $dangerBackgroundColorHover;
+      }
+    }
+    &.img--btn {
+      position: relative;
+      left: 0.4rem;
+      display: block;
+      border: none;
+      color: inherit;
+      background-color: none;
+      width: 1.5rem;
+      min-width: 0;
+      height: 1.5rem;
+      padding: 0;
+      margin: 0;
+      border-radius: 0px;
+      &.danger {
+        filter: $whiteIconImageFilter;
+        background-color: #0000;
+      }
+      &:hover {
+        background-color: #0000;
+      }
+    }
+    &.span--btn {
+      position: relative;
+      left: 1rem;
+      display: block;
+      border: none;
+      color: $secondaryBlack;
+      background-color: #0000;
+      min-width: 0;
+      width: fit-content;
+      padding: 0;
+      margin: 0;
+      border-radius: 0px;
+      &.danger {
+        color: $mainWhite;
+      }
+    }
+  }
+}
+
+.toy-page {
+  & p {
+    width: 100%;
+    margin: 0.1rem auto;
+    text-align: left;
+  }
+}
+
+.toy-page__section--flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.toy-page__div--details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 35rem;
+  margin: 0.5rem auto;
+  padding: 0 0.75rem;
+}
+
+p.toy-page__description {
+  border-top: 1px solid #bbb;
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+  text-align: left;
+  width: 88vw;
+  max-width: 32rem;
+}
+
+@include media-md {
+  .toy-page__details-and-action-container,
+  .toy-page__div--details {
+    width: 38%;
+    max-width: 23rem;
+    margin: 0;
+  }
+  .toy-page__div--details {
+    width: 52%;
+    max-width: 32rem;
+    justify-content: flex-start;
+    margin-right: 2rem;
+  }
+  .toy-page__details-and-action-container {
+    margin-top: 2.65rem;
+    border: 1px solid #0002;
+    background-color: $mainFgColor;
+    border-radius: 8px;
+    padding: 0.8rem;
+    height: fit-content;
+    align-self: flex-start;
+  }
+  .toy-page__actions-container {
+    margin-top: 0;
+    border-top: 0px solid #0000;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+  .toy-page__image {
+    width: 48vw;
+    height: 48vw;
+    max-height: 32rem;
+  }
+  p.toy-page__description {
+    width: 48vw;
+    margin: 0;
+    margin-bottom: 0.7rem;
+  }
+
+  .toy-page p,
+  .toy-page__h1 {
+    text-align: left;
+  }
+  .toy-page__h1 {
+    font-size: 1.8rem;
+  }
+  .toy-page__button {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@include media-lg {
+  .toy-page__h1 {
+    font-size: 2rem;
+  }
+  .toy-page__details-and-action-container {
+    margin-top: 2.85rem;
+  }
+}
