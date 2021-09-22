@@ -1,0 +1,75 @@
+$primaryColor: hsl(208, 48%, 38%);
+$primaryColorDim: hsl(208, 48%, 33%);
+$primaryColorDimTranslucent: hsla(208, 48%, 33%, 95%);
+$primaryColorBrighten: hsl(208, 48%, 43%);
+$primaryColorBrightenMore: hsl(208, 48%, 48%);
+$primaryColorBrightenEvenMore: hsl(208, 48%, 53%);
+$primaryColorGradient: linear-gradient(90deg, #22547f 0%, #42639f 100%);
+$primaryColorGradientDim: linear-gradient(90deg, #12446f 0%, #32538f 100%);
+// analogous or different brightness / saturation color to the primary
+$secondaryColor: #1fc278;
+$secondaryColorDark: #007162;
+
+// contrast color to the primary
+$mainFgColor: #fafdff;
+$mainFgColorDim: #eaedef;
+
+$mainBgColor: #e1e7ef;
+$authBgColor: linear-gradient(150deg, #9ccfff 0%, #c7d0db 100%);
+
+$buttonBlack: #2f2f2f;
+$buttonBlackDim: #1b1b1b;
+$buttonBlackLight: #4f4f4f;
+$blackIconImageFilter: invert(6%) sepia(5%) saturate(4412%) hue-rotate(149deg)
+  brightness(97%) contrast(83%);
+$blackIconImageFilterLight: invert(29%) sepia(0%) saturate(1%)
+  hue-rotate(104deg) brightness(97%) contrast(88%);
+$blackIconImageFilterLighter: invert(22%) sepia(5%) saturate(1936%)
+  hue-rotate(158deg) brightness(97%) contrast(91%);
+$whiteIconImageFilter: invert(91%) sepia(3%) saturate(336%) hue-rotate(176deg)
+  brightness(108%) contrast(87%);
+
+// $mainBlack: #000;
+// hsl(209,46%,61%)
+$mainBlack: hsl(198, 22%, 10%);
+$mainBlackLight: hsl(198, 22%, 15%);
+$secondaryBlack: hsl(195, 18%, 13%);
+$secondaryBlackLight: hsl(198, 18%, 17%);
+$secondaryBlackLighter: hsl(202, 15%, 24%);
+$mainWhite: #fafdff;
+$mainWhiteDim: #eaedef;
+
+$mainWhiteDimmer: #dadddf;
+$fontPrimary: "Commissioner", sans-serif;
+
+// This is for error and warnings
+$lightPink: #ffacb4;
+$glowingYellowTextColor: #ffe;
+$warningTextColor: #fa8;
+$warningTextColorHover: #fdb;
+$warningTextColorLight: #fc9;
+$warningBackgroundColor: #fdb;
+$warningBackgroundColorHover: #fed;
+$dangerTextColor: #933;
+$dangerTextColorDim: rgb(124, 41, 41);
+$dangerTextColorLight: rgb(184, 61, 61);
+$dangerInputBackgroundColor: #fee;
+$dangerBackgroundColor: #b33;
+$dangerBackgroundColorHover: #a22;
+$dangerImageFilter: invert(22%) sepia(42%) saturate(2810%) hue-rotate(334deg)
+  brightness(91%) contrast(88%);
+$dangerImageFilterBrighten: invert(31%) sepia(30%) saturate(1559%)
+  hue-rotate(315deg) brightness(96%) contrast(88%);
+
+// Textfield, forms, variables
+$inputFieldBgColor: #f4f4f4;
+$inputFieldBgColorDim: #e4e4e4;
+$textfieldFocusColor: #fffff2;
+
+// size variables
+$profilePictureSize: 2.5rem;
+$imageItemMobileMaxWidth: calc(100vw - 4rem);
+$imageSectionMobileMaxWidth: calc(100vw - 4rem);
+
+$contentAreaMaxWidth: 80rem;
+// $imageItemMobileHeight: calc(100vw - 2rem)

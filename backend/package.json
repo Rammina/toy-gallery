@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:build": "tsc -w",
-    "start:run": "nodemon build/index.js",
-    "start": "concurrently npm:start:*",
+    "start": "tsc && node build/index.js",
+    "dev": "nodemon -e ts  --exec \"npm run start\"",
     "test": "jest --testTimeout=10000",
     "test:watch": "jest --watch --testTimeout=10000"
   },
@@ -22,6 +21,7 @@
     "@types/node": "^16.7.13",
     "@types/supertest": "^2.0.11",
     "@types/uuid": "^8.3.1",
+    "concurrently": "^6.2.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
@@ -41,6 +41,7 @@
   "dependencies": {
     "@koa/cors": "^3.1.0",
     "@koa/router": "^10.1.1",
+    "cloudinary": "^1.27.0",
     "dotenv": "^10.0.0",
     "joi": "^17.4.2",
     "koa": "^2.13.1",
