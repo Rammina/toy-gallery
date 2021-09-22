@@ -8,20 +8,23 @@ It is a full-stack application built using Typescript, React, Node.js, Koa, SCSS
 
 ## Table of Contents
 
-- [Getting Started](/rammina/dev#getting-started)
-  - [Prerequisites](/rammina/dev#prerequisites)
-  - [Installation](/rammina/dev#installation)
-    - [Frontend](/rammina/dev#frontend)
-    - [Backend](/rammina/dev#backend)
-- [Running Tests](/rammina/dev#running-tests)
-- [Features](/rammina/dev#features)
-  - [Authentication](/rammina/dev#application)
-  - [Toys](/rammina/dev#application)
-  - [UI/UX](/rammina/dev#uiux)
-  - [Testing](/rammina/dev#testing)
-- [Built With](/rammina/dev#built-with)
-- [Dependencies](/rammina/dev#dependencies)
-- [License](/rammina/dev#license)
+- [Getting Started](https://github.com/Rammina/toy-gallery#getting-started)
+  - [Prerequisites](https://github.com/Rammina/toy-gallery#prerequisites)
+  - [Installation](https://github.com/Rammina/toy-gallery#installation)
+    - [Frontend](https://github.com/Rammina/toy-gallery#frontend)
+    - [Backend](https://github.com/Rammina/toy-gallery#backend)
+    - [MongoDB and Cloudinary](https://github.com/Rammina/toy-gallery#mongodb-and-cloudinary)
+      - [MongoDB Atlas Setup](https://github.com/Rammina/toy-gallery#mongodb-atlas-setup)
+      - [Cloudinary Setup](https://github.com/Rammina/toy-gallery#cloudinary-setup)
+- [Running Tests](https://github.com/Rammina/toy-gallery#running-tests)
+- [Features](https://github.com/Rammina/toy-gallery#features)
+  - [Authentication](https://github.com/Rammina/toy-gallery#authentication)
+  - [Toys](https://github.com/Rammina/toy-gallery#toys)
+  - [UI/UX](https://github.com/Rammina/toy-gallery#uiux)
+  - [Testing](https://github.com/Rammina/toy-gallery#testing)
+- [Built With](https://github.com/Rammina/toy-gallery#built-with)
+- [Dependencies](https://github.com/Rammina/toy-gallery#dependencies)
+- [License](https://github.com/Rammina/toy-gallery#license)
 
 ## Getting Started
 
@@ -105,7 +108,7 @@ The backend requires the appropriate environment variables to run properly. Chec
 
 The backend should now be running.
 
-## MongoDB and Cloudinary
+#### MongoDB and Cloudinary
 
 To run the server, one must make an account for both MongoDB Atlas and Cloudinary.
 
@@ -114,7 +117,7 @@ Registration instructions for both sites can be found in:
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register)
 - [Cloudinary](https://cloudinary.com/users/register/free)
 
-### MongoDB Atlas Setup
+##### MongoDB Atlas Setup
 
 After creating an account, click `New Project` and follow the instructions.
 
@@ -134,7 +137,7 @@ After creating a database, click `CONNECT`, follow the instructions, choose `Con
 
 <img src="https://res.cloudinary.com/rammina/image/upload/v1619599174/connect_auxyi2.png" alt="Connect"/>
 
-### Cloudinary Setup
+##### Cloudinary Setup
 
 To setup Cloudinary, one must first create an account. After registration, check the dashboard for the following information and put them on the .env file:
 
@@ -218,6 +221,6 @@ You should be seeing a message that jest is running as well as test results and 
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md file](/blob/rammina/dev/LICENSE) for details.
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md file](https://github.com/Rammina/toy-gallery/blob/main/LICENSE) for details.
 
-[<< Go back to the top of the page](/rammina/dev#ramminotes)
+[<< Go back to the top of the page](https://github.com/Rammina/toy-gallery#toy-gallery)
