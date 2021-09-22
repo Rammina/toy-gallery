@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const serverURL = "http://localhost:5000";
+const serverURL = "https://toy-gallery.herokuapp.com/";
 
 export default axios.create({
   baseURL: serverURL,
