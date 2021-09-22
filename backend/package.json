@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node build/index.js",
-    "dev": "nodemon -e ts  --exec \"npm run start\"",
+    "start": "node build/index.js",
+      "build": "tsc",
+      "postinstall": "npm run build",
+    "compile": "tsc && node build/index.js",
+    "dev": "nodemon -e ts  --exec \"npm run compile\"",
     "test": "jest --testTimeout=10000",
     "test:watch": "jest --watch --testTimeout=10000"
   },
