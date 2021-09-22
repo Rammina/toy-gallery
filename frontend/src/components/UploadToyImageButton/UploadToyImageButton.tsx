@@ -66,10 +66,11 @@ const UploadToyImageButton: FC<Props> = ({ className }) => {
   const uploadImage = async (base64EncodedImage: any) => {
     if (!toy) return null;
     let toyId: string = toy.id! || toy._id!;
+
     const successCb = () => {
       setImageUploadModalOpen(false);
     };
-    dispatch(uploadToyImage(base64EncodedImage, toy.id!, successCb));
+    dispatch(uploadToyImage(base64EncodedImage, toyId!, successCb));
   };
 
   // upload form submission handler
