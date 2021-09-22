@@ -6,6 +6,8 @@ This application is an online toy gallery for users to showcase their action fig
 
 It is a full-stack application built using Typescript, React, Node.js, Koa, SCSS, and etc.
 
+LIVE LINK: https://toy-gallery.netlify.app/
+
 ## Table of Contents
 
 - [Getting Started](https://github.com/Rammina/toy-gallery#getting-started)
