@@ -17,4 +17,4 @@ This serves as a "hub" type of file to easily access documentation for the appli
 
 <br>
 
-[<< Go back to README]()
+[<< Go back to README](https://github.com/Rammina/toy-gallery)
