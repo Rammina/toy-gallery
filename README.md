@@ -229,6 +229,10 @@ If you would like to examine the documentation related to the application and de
 
 <strong>Note: /docs_md should not be deployed to a production environment.</strong>
 
+## Contributing
+
+//TODO: Add ways for others to help improve the project.
+
 ## License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md file](https://github.com/Rammina/toy-gallery/blob/main/LICENSE) for details.
