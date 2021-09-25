@@ -8,7 +8,7 @@
 
 This application is an online toy gallery for users to showcase their action figures, figurines, plastic model kits, and so on.
 
-## Must-haves (main requirements of the test)
+## Must-haves (main requirements)
 
 The application must:
 
@@ -20,8 +20,7 @@ The application must:
   - create a toy page
   - update their own toy pages
   - delete their own toy pages
-  - upload images of their toys inside a toy page
-  - choose a main "highlight" image to use
+  - upload images of their toys inside a toy page  
 - store any created and updated data in a database
 - retrieve data from the database and
 - change the state on the client side after retrieval
@@ -39,11 +38,14 @@ The application should:
   - provide comments to a user's page
   - give likes or hearts to a user's page
 - have profile pages for users
+- allow users to choose a main "highlight" image to use for a toy page
+- images should look appropriate and adjust to of the file resolution dynamically
+- 
 
 ## Nice-to-haves
 
 - UI/UX enhancements
 
-[<< Go back to README]()
+[<< Go back to README](https://github.com/Rammina/toy-gallery)
 
 [<< Go back to documentation links]()
