@@ -26,6 +26,7 @@ LIVE LINK: https://toy-gallery.netlify.app/
   - [Testing](https://github.com/Rammina/toy-gallery#testing)
 - [Built With](https://github.com/Rammina/toy-gallery#built-with)
 - [Dependencies](https://github.com/Rammina/toy-gallery#dependencies)
+- [Developer Dependencies]()
 - [License](https://github.com/Rammina/toy-gallery#license)
 
 ## Getting Started
@@ -220,6 +221,12 @@ You should be seeing a message that jest is running as well as test results and 
 - [Backend Dependencies](/blob/rammina/dev/docs_md/backend_dependencies.md)
 
 //TODO: Update this and fix it
+
+## Developer Documentation
+
+If you would like to examine the documentation related to the application and development process, [go to this page](https://github.com/Rammina/toy-gallery/blob/main/docs_md/about_docs.md#developer-documentation).
+
+<strong>Note: /docs_md should not be deployed to a production environment.</strong>
 
 ## License
 
