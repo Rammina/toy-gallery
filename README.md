@@ -26,7 +26,8 @@ LIVE LINK: https://toy-gallery.netlify.app/
   - [Testing](https://github.com/Rammina/toy-gallery#testing)
 - [Built With](https://github.com/Rammina/toy-gallery#built-with)
 - [Dependencies](https://github.com/Rammina/toy-gallery#dependencies)
-- [Developer Dependencies]()
+- [Developer Documentation](https://github.com/Rammina/toy-gallery/blob/main/README.md#developer-documentation)
+- [Contributing]()
 - [License](https://github.com/Rammina/toy-gallery#license)
 
 ## Getting Started
