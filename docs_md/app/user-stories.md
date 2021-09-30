@@ -120,3 +120,9 @@ I want to **display landscape images of my toys in a page**
 So I can **showcase them in the best aspect ratio**
 Checklist:
 []
+
+As a(n) **User**
+I want to **add loader when retrieving ToysListPage**
+So I can **so that the user does not wonder if the application is broken when nothing shows up**
+Checklist:
+[]
