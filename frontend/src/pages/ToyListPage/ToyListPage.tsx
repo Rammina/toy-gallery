@@ -7,6 +7,7 @@ import queryString from "query-string";
 import ToyItem from "components/ToyItem/ToyItem";
 import CreateToyButton from "components/CreateToyButton/CreateToyButton";
 import SortToysButton from "components/SortToysButton/SortToysButton";
+import LoadingSpinner from "components/ui/loaders/LoadingSpinner";
 import { AppDispatch, ActionTypes, getToyList } from "redux/actions";
 import { RootState } from "redux/reducers";
 import { MapIndex, Toy } from "appTypes";
@@ -55,11 +56,16 @@ const ToyListPage: FC = (): JSX.Element => {
         </div>
         <ul className="toy-list-page__ul">
           {/*render nothing if there are no toys, otherwise render the toys*/}
-          {!toys || toys.length < 1
-            ? null
-            : toys.map((toy: Toy, index: MapIndex) => (
-                <ToyItem toy={toy} key={index} />
-              ))}
+          {!toys || toys.length < 1 ? (
+            <LoadingSpinner
+              className="toy-list-page__loader"
+              showLoader={true}
+            />
+          ) : (
+            toys.map((toy: Toy, index: MapIndex) => (
+              <ToyItem toy={toy} key={index} />
+            ))
+          )}
         </ul>
       </section>
     </main>

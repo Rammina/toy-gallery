@@ -31,7 +31,8 @@ https://loading.io/css/
   border-color: $mainWhite transparent transparent transparent;
 }
 
-.toy-page__loader.lds-ring {
+.toy-page__loader.lds-ring,
+.toy-list-page__loader.lds-ring {
   position: fixed;
   top: calc(50% - 1rem);
   right: calc(50% - 1rem);
@@ -39,7 +40,8 @@ https://loading.io/css/
   height: 2rem;
 }
 
-.toy-page__loader.lds-ring div {
+.toy-page__loader.lds-ring div,
+.toy-list-page__loader.lds-ring div {
   width: 2rem;
   height: 2rem;
   border-color: $secondaryBlack transparent transparent transparent;
