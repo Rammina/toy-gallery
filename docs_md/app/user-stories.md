@@ -4,10 +4,10 @@ These are brief, informal descriptions of a software feature told from the persp
 
 ## Table of Contents
 
-- []()
-- []()
-- []()
-- []()
+- [Format]()
+- [Navigation]()
+- [User]()
+- [Toy]()
 
 ## Format
 
