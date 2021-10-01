@@ -1,25 +1,26 @@
 @import "~styles/_variables";
 @import "~styles/_config";
 
-#navmenu__button--hamburger {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 3px;
-  padding: 0;
-  background-color: #0000;
-  border: 2px solid $mainWhite;
-  &:hover {
-    background-color: #0002;
+#navmenu__ {
+  &button--hamburger {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3px;
+    padding: 0;
+    background-color: #0000;
+    border: 2px solid $mainWhite;
+    &:hover {
+      background-color: #0002;
+    }
+  }
+  &img--hamburger {
+    position: relative;
+    top: 0.125rem;
+    filter: $whiteIconImageFilter;
   }
 }
 
-#navmenu__img--hamburger {
-  position: relative;
-  top: 0.125rem;
-  filter: $whiteIconImageFilter;
-}
-
-.navmenu__outer-container {
+.navmenu__nav--outer {
   z-index: 100;
   visibility: hidden;
   opacity: 0;
@@ -34,7 +35,7 @@
   animation: 0.3s ease-out forwards navbar-hide;
   transform: translateX(17rem);
 }
-.navmenu__outer-container.show {
+.navmenu__nav--outer.show {
   animation: 0.3s ease-out forwards navbar-show;
 }
 .close-icon-img.navmenu__close {
@@ -99,8 +100,8 @@
     display: none;
   }
 
-  .navmenu__outer-container,
-  .navmenu__outer-container.show {
+  .navmenu__nav--outer,
+  .navmenu__nav--outer.show {
     z-index: 20;
     display: block;
     position: relative;

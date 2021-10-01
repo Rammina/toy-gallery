@@ -150,7 +150,7 @@ const NavMenu: FC<Props> = () => {
         className={`navmenu__backdrop backdrop mobile-only ${getNavMenuClass()}`}
         onClick={navmenuOnCloseHandler}
       ></div>
-      <div className={`navmenu__outer-container ${getNavMenuClass()}`}>
+      <nav className={`navmenu__nav--outer ${getNavMenuClass()}`}>
         <div className="navmenu__title-close-container">
           <Link to="/" id="navmenu__title-link">
             {SITE_TITLE}
@@ -172,7 +172,7 @@ const NavMenu: FC<Props> = () => {
           </Link>
           {renderConditionalItems()}
         </ul>
-      </div>
+      </nav>
     </>
   );
 };
