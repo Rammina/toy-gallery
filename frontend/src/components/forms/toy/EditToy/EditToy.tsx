@@ -1,7 +1,7 @@
 // Package imports
 import React, { useEffect, useContext, FC } from "react";
 import ReactDOM from "react-dom";
-import { reduxForm, InjectedFormProps } from "redux-form";
+import { reduxForm } from "redux-form";
 import { useSelector, useDispatch } from "react-redux";
 // Non-package imports
 import { Toy } from "appTypes";
@@ -90,14 +90,12 @@ const EditToy: FC<Props> = ({ handleSubmit }) => {
                   className: "form__input",
                   maxLength: "60",
                   autoComplete: "off",
-                  id: "edit-toy-name-field",
                   type: "text",
                   autoFocus: true,
                 },
                 labelProps: {
                   className: "form__label",
                   text: "Toy Name *",
-                  id: "edit-toy-name-label",
                 },
               }}
             />
@@ -111,13 +109,11 @@ const EditToy: FC<Props> = ({ handleSubmit }) => {
                   className: "form__input",
                   maxLength: "60",
                   autoComplete: "off",
-                  id: "create-toy-franchise-field",
                   type: "text",
                 },
                 labelProps: {
                   className: "form__label",
                   text: "Franchise",
-                  id: "create-toy-franchise-label",
                 },
               }}
             />
@@ -131,13 +127,11 @@ const EditToy: FC<Props> = ({ handleSubmit }) => {
                   className: "form__input",
                   maxLength: "60",
                   autoComplete: "off",
-                  id: "create-toy-series-field",
                   type: "text",
                 },
                 labelProps: {
                   className: "form__label",
                   text: "Series",
-                  id: "create-toy-series-label",
                 },
               }}
             />
@@ -151,13 +145,11 @@ const EditToy: FC<Props> = ({ handleSubmit }) => {
                   className: "form__input",
                   maxLength: "60",
                   autoComplete: "off",
-                  id: "create-toy-manufacturer-field",
                   type: "text",
                 },
                 labelProps: {
                   className: "form__label",
                   text: "Toy Manufacturer",
-                  id: "create-toy-manufacturer-label",
                 },
               }}
             />
@@ -169,19 +161,16 @@ const EditToy: FC<Props> = ({ handleSubmit }) => {
                 inputProps: {
                   className: "form__input",
                   autoComplete: "off",
-                  id: "edit-toy-description-field",
                 },
                 labelProps: {
                   className: "form__label",
                   text: "Description ",
-                  id: "edit-toy-description-label",
                 },
               }}
             />
 
             <div className="form__div--button">
               <button
-                id="edit-toy-submit"
                 className={"form__button submit"}
                 type="submit"
                 onClick={handleSubmit(onSubmit)}
