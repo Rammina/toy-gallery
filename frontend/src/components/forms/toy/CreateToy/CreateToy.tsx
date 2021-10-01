@@ -88,14 +88,12 @@ const CreateToy: FC<Props> = ({ handleSubmit }) => {
                   className: "form__input",
                   maxLength: "60",
                   autoComplete: "off",
-                  id: "create-toy-name-field",
                   type: "text",
                   autoFocus: true,
                 },
                 labelProps: {
                   className: "form__label",
                   text: "Toy Name *",
-                  id: "create-toy-name-label",
                 },
               }}
             />
@@ -109,13 +107,12 @@ const CreateToy: FC<Props> = ({ handleSubmit }) => {
                   className: "form__input",
                   maxLength: "60",
                   autoComplete: "off",
-                  id: "create-toy-franchise-field",
+
                   type: "text",
                 },
                 labelProps: {
                   className: "form__label",
                   text: "Franchise",
-                  id: "create-toy-franchise-label",
                 },
               }}
             />
@@ -129,13 +126,11 @@ const CreateToy: FC<Props> = ({ handleSubmit }) => {
                   className: "form__input",
                   maxLength: "60",
                   autoComplete: "off",
-                  id: "create-toy-series-field",
                   type: "text",
                 },
                 labelProps: {
                   className: "form__label",
                   text: "Series",
-                  id: "create-toy-series-label",
                 },
               }}
             />
@@ -149,13 +144,11 @@ const CreateToy: FC<Props> = ({ handleSubmit }) => {
                   className: "form__input",
                   maxLength: "60",
                   autoComplete: "off",
-                  id: "create-toy-manufacturer-field",
                   type: "text",
                 },
                 labelProps: {
                   className: "form__label",
                   text: "Toy Manufacturer",
-                  id: "create-toy-manufacturer-label",
                 },
               }}
             />
@@ -167,12 +160,10 @@ const CreateToy: FC<Props> = ({ handleSubmit }) => {
                 inputProps: {
                   className: "form__input",
                   autoComplete: "off",
-                  id: "create-toy-description-field",
                 },
                 labelProps: {
                   className: "form__label",
                   text: "Description ",
-                  id: "create-toy-description-label",
                 },
               }}
             />
@@ -199,11 +190,6 @@ const CreateToy: FC<Props> = ({ handleSubmit }) => {
   );
 };
 
-/**
- *redux-form's validate function for checking form values
- *@function validate
- *@returns {Object} - Object containing errors
- */
 const validate = (formValues: Toy) => {
   const errors: ToyFormErrors = {};
   if (!formValues.name) {
