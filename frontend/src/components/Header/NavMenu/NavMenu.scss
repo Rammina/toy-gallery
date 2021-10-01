@@ -18,85 +18,82 @@
     top: 0.125rem;
     filter: $whiteIconImageFilter;
   }
-}
-
-.navmenu__nav--outer {
-  z-index: 100;
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  height: 100vh;
-  width: 18rem;
-  background-color: $mainWhite;
-  color: $mainBlack;
-  top: 0;
-  right: 0;
-  border-left: #0002;
-  animation: 0.3s ease-out forwards navbar-hide;
-  transform: translateX(17rem);
-}
-.navmenu__nav--outer.show {
-  animation: 0.3s ease-out forwards navbar-show;
-}
-.close-icon-img.navmenu__close {
-  // filter: $greenIconImageFilter;
-  filter: $blackIconImageFilter;
-}
-.navmenu__items {
-  // margin-top: 1rem;
-  width: 100%;
-  padding: 0;
-}
-
-.navmenu__title-close-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding-left: 1rem;
-  border-bottom: 1px solid #0001;
-}
-
-#navmenu__title-link {
-  font-weight: 700;
-  font-size: 1.35rem;
-}
-
-.navmenu__item {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  min-height: 3rem;
-  line-height: 3rem;
-  padding-left: 1rem;
-  font-size: 1.15rem;
-  border-bottom: 1px solid #0001;
-  background-color: #0000;
-  color: $secondaryBlack;
-  &:hover {
-    background-color: #0001;
+  &title-link {
+    font-weight: 700;
+    font-size: 1.35rem;
   }
-  // if it is the current page
 }
 
-.navmenu__item-img {
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  filter: $blackIconImageFilterLight;
-  margin-right: 0.8rem;
+.navmenu__ {
+  &nav--outer {
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    height: 100vh;
+    width: 18rem;
+    background-color: $mainWhite;
+    color: $mainBlack;
+    top: 0;
+    right: 0;
+    border-left: #0002;
+    animation: 0.3s ease-out forwards navbar-hide;
+    transform: translateX(17rem);
+    &.show {
+      animation: 0.3s ease-out forwards navbar-show;
+    }
+  }
+  &items {
+    width: 100%;
+    padding: 0;
+  }
+
+  &div--title-close {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 1rem;
+    border-bottom: 1px solid #0001;
+  }
+
+  &item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 3rem;
+    line-height: 3rem;
+    padding-left: 1rem;
+    font-size: 1.15rem;
+    border-bottom: 1px solid #0001;
+    background-color: #0000;
+    color: $secondaryBlack;
+    &:hover {
+      background-color: #0001;
+    }
+  }
+  &img--item {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: $blackIconImageFilterLight;
+    margin-right: 0.8rem;
+    &button__icon {
+      margin-left: 0.8rem;
+      filter: $whiteIconImageFilter;
+      width: 0.7rem;
+      height: 0.7rem;
+    }
+  }
 }
 
-.navmenu__item-img.button__icon {
-  margin-left: 0.8rem;
-  filter: $whiteIconImageFilter;
-  width: 0.7rem;
-  height: 0.7rem;
+.close-icon-img.navmenu__close {
+  filter: $blackIconImageFilter;
 }
 
 @include media-md {
   #navmenu__button--hamburger,
-  .navmenu__title-close-container {
+  .navmenu__div--title-close {
     display: none;
   }
 
@@ -116,38 +113,42 @@
     transition: none;
     animation: none;
   }
-  .navmenu__items {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 0;
-    width: 100%;
-    padding: 0;
-    height: 3.75rem;
-  }
-  .navmenu__item {
-    padding: 0 1.9rem;
-    margin: 0 0.1rem;
-    width: fit-content;
-    height: 3.75rem;
-    line-height: 3.75rem;
-    border-bottom: none;
-    color: $mainWhite;
-    &.active {
-      border-left: none;
-      border-bottom: 3px solid $mainWhite;
+
+  .navmenu__ {
+    &items {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0;
+      width: 100%;
+      padding: 0;
+      height: 3.75rem;
     }
-  }
-  .navmenu__item-img {
-    display: none;
-  }
-  .navmenu__item-img.button__icon {
-    position: relative;
-    top: 0.2rem;
-    bottom: 0;
-    display: block;
-  }
-  .navmenu__title-close-container {
-    border-bottom: none;
+    &item {
+      padding: 0 1.9rem;
+      margin: 0 0.1rem;
+      width: fit-content;
+      height: 3.75rem;
+      line-height: 3.75rem;
+      border-bottom: none;
+      color: $mainWhite;
+      &.active {
+        border-left: none;
+        border-bottom: 3px solid $mainWhite;
+      }
+    }
+    &img--item {
+      display: none;
+
+      &button__icon {
+        position: relative;
+        top: 0.2rem;
+        bottom: 0;
+        display: block;
+      }
+    }
+    &div--title-close {
+      border-bottom: none;
+    }
   }
 }
 
