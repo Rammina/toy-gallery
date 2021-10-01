@@ -72,11 +72,7 @@ const DeleteToy: FC<Props> = ({ toy, onModalClose }) => {
         onModalClose={onModalCloseHandler}
         ariaLabel="delete toy modal"
       >
-        <form
-          id="delete-toy-form"
-          autoComplete="off"
-          onSubmit={onSubmitHandler}
-        >
+        <form onSubmit={onSubmitHandler}>
           <div className="delete-toy modal__div--content">
             <p className="modal__modal-p delete-toy">
               Are you sure you want to delete this toy?
@@ -84,17 +80,13 @@ const DeleteToy: FC<Props> = ({ toy, onModalClose }) => {
             <p className="modal__modal-p delete-toy enlarged-text centered">
               {toy.name}
             </p>
-            <p
-              id="delete-toy-description-paragraph"
-              className="modal__modal-p small-text danger"
-            >
+            <p className="modal__modal-p small-text danger">
               Warning: Deleted toys cannot be restored.
             </p>
 
             {renderErrorNotifications()}
 
             <button
-              id="delete-toy-submit"
               className={"form__button submit danger"}
               type="submit"
               onClick={onSubmitHandler}
