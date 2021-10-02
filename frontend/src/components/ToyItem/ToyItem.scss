@@ -112,15 +112,19 @@
     }
   }
 }
-
+/*
+//TODO: check if this works similarly to the mixin version
 @media screen and (min-width: 600px) {
   .toy-item {
     width: 40vw;
   }
 }
+*/
 
-@include media-md {
-  // custom version for a different page
+@include mqMinW(600px) {
+  .toy-item {
+    width: 40vw;
+  }
 }
 
 @include media-lg {
@@ -128,17 +132,19 @@
     width: 24vw;
     max-width: 16rem;
   }
-  .toy-item__div--popup {
-    z-index: 20;
-    position: absolute;
-    bottom: 0;
-    background-color: $mainWhite;
-    transition: opacity 0.3s ease;
-    visibility: hidden;
-    opacity: 0;
-    &.show {
-      visibility: visible;
-      opacity: 1;
+  .toy-item__ {
+    &div--popup {
+      z-index: 20;
+      position: absolute;
+      bottom: 0;
+      background-color: $mainWhite;
+      transition: opacity 0.3s ease;
+      visibility: hidden;
+      opacity: 0;
+      &.show {
+        visibility: visible;
+        opacity: 1;
+      }
     }
   }
 }
