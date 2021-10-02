@@ -1,21 +1,27 @@
-@import "~styles/_variables.scss";
+@import "~styles/_variables";
+@import "~styles/_mixins";
 
-.close-button__button {
-  width: 3rem;
-  height: 3rem;
-  background-color: #0000;
-  &:hover {
-    background-color: #0002;
+.close-button__ {
+  &button {
+    width: 3rem;
+    height: 3rem;
+    background-color: #0000;
+    &:hover {
+      background-color: #0002;
+    }
   }
-}
+  &img {
+    background-color: #0000;
+    width: 1.25rem;
+    height: 1.25rem;
+    filter: $blackIconImageFilter;
+    &:hover {
+      filter: $blackIconImageFilterLight;
+    }
+  }
 
-.close-button__img {
-  background-color: #0000;
-  width: 1.25rem;
-  height: 1.25rem;
-  filter: $blackIconImageFilter;
-  &:hover {
-    filter: $blackIconImageFilterLight;
+  &div.hide-on-mobile {
+    display: none;
   }
 }
 
@@ -24,11 +30,7 @@
   left: 0.7rem;
 }
 
-.close-button__div.hide-on-mobile {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
+@include media-md {
   .close-button__div {
     &.hide-on-mobile {
       display: block;

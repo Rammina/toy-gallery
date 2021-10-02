@@ -7,9 +7,7 @@ import { SITE_TITLE } from "utils/constants";
 
 import "./Header.scss";
 
-interface Props {}
-
-const Header: FC<Props> = (props) => {
+const Header: FC = () => {
   return (
     <header className="header">
       <section className="header__section">
@@ -19,7 +17,6 @@ const Header: FC<Props> = (props) => {
             <span>{SITE_TITLE}</span>
           </Link>
         </div>
-        {/*search bar*/}
         <SearchBar />
         {/*hamburger & navmenu*/}
         <div className="header__div header__div--navmenu">

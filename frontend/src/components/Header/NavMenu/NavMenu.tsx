@@ -88,7 +88,7 @@ const NavMenu: FC<Props> = () => {
       <>
         <Link to="/register" className="navmenu__item">
           <img
-            className="navmenu__item-img"
+            className="navmenu__img--item"
             src={RegisterImage}
             alt="Register Image"
           />
@@ -96,7 +96,7 @@ const NavMenu: FC<Props> = () => {
         </Link>
         <Link to="/login" className="navmenu__item">
           <img
-            className="navmenu__item-img"
+            className="navmenu__img--item"
             src={LoginImage}
             alt="Login Image"
           />
@@ -106,7 +106,7 @@ const NavMenu: FC<Props> = () => {
     ) : (
       <button className="navmenu__item" onClick={logoutHandler}>
         <img
-          className="navmenu__item-img"
+          className="navmenu__img--item"
           src={LogoutImage}
           alt="Logout Image"
         />
@@ -118,7 +118,7 @@ const NavMenu: FC<Props> = () => {
         <>
           <Link to="/dashboard" className="navmenu__item">
             <img
-              className="navmenu__item-img"
+              className="navmenu__img--item"
               src={DashboardImage}
               alt="Dashboard Image"
             />
@@ -150,8 +150,8 @@ const NavMenu: FC<Props> = () => {
         className={`navmenu__backdrop backdrop mobile-only ${getNavMenuClass()}`}
         onClick={navmenuOnCloseHandler}
       ></div>
-      <div className={`navmenu__outer-container ${getNavMenuClass()}`}>
-        <div className="navmenu__title-close-container">
+      <nav className={`navmenu__nav--outer ${getNavMenuClass()}`}>
+        <div className="navmenu__div--title-close">
           <Link to="/" id="navmenu__title-link">
             {SITE_TITLE}
           </Link>
@@ -164,7 +164,7 @@ const NavMenu: FC<Props> = () => {
         <ul className="navmenu__items">
           <Link to="/" className="navmenu__item">
             <img
-              className="navmenu__item-img"
+              className="navmenu__img--item"
               src={HomeImage}
               alt="Home Image"
             />
@@ -172,7 +172,7 @@ const NavMenu: FC<Props> = () => {
           </Link>
           {renderConditionalItems()}
         </ul>
-      </div>
+      </nav>
     </>
   );
 };

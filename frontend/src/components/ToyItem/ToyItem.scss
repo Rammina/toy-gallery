@@ -1,5 +1,5 @@
 @import "~styles/_variables";
-@import "~styles/_config";
+@import "~styles/_mixins";
 .toy-item {
   position: relative;
   padding: 0.5rem;
@@ -9,131 +9,122 @@
   width: 88vw;
 }
 
-.toy-item__card {
-  padding: 0;
-
-  &:hover {
-    cursor: pointer;
-    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.6);
-  }
-}
-
-.toy-item__div--popup {
-  width: 100%;
-  background-color: #f7f7f7;
-  border-top: 1px solid #0002;
-}
-
-.toy-item__div--info {
-  padding: 0.5rem;
-  width: 100%;
-}
-
-.toy-item__div--image {
-  width: 100%;
-  height: 88vw;
-  max-height: 15rem;
-  background-color: #999;
-}
-
-.toy-item__div--image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 0;
-}
-
 .toy-item__div--info h2,
 .toy-item__div--info h3,
 .toy-item__div--info p {
   margin: 0 0 0.25rem 0;
 }
 
-.toy-item__div--info h2 {
-  font-size: 1.2rem;
-}
+.toy-item__ {
+  &card {
+    padding: 0;
 
-.toy-item__div--info h3 {
-  margin-bottom: 0;
-  font-size: 1.05rem;
-  font-weight: normal;
-  color: $mainBlackLight;
-}
-
-.toy-item__amount-donated {
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-
-.toy-item__div--actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 2.5rem;
-  width: 100%;
-  border-top: 1px solid #ccc;
-}
-
-.toy-item__modal-content {
-  padding: 0;
-}
-
-.toy-item__modal-actions {
-  text-align: right;
-}
-
-.toy-item__button--action.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 2rem;
-  height: 2rem;
-  background-color: #0000;
-  color: $secondaryBlack;
-  border: 1px solid $secondaryBlack;
-  width: fit-content;
-  height: auto;
-  min-height: 0;
-  border-radius: 3px;
-  margin: 0.4rem 0.5rem;
-  padding: 0.3rem 0.6rem;
-  &:hover {
-    background-color: #0001;
-  }
-  &.danger {
-    background-color: $dangerBackgroundColor;
-    color: $mainWhite;
     &:hover {
-      background-color: $dangerBackgroundColorHover;
+      cursor: pointer;
+      box-shadow: 0 2px 9px rgba(0, 0, 0, 0.6);
+    }
+  }
+  &div--popup {
+    width: 100%;
+    background-color: #f7f7f7;
+    border-top: 1px solid #0002;
+  }
+  &div--info {
+    padding: 0.5rem;
+    width: 100%;
+  }
+  &div--image {
+    width: 100%;
+    height: 88vw;
+    max-height: 15rem;
+    background-color: #999;
+  }
+  &div--image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 0;
+  }
+  &div--info h2 {
+    font-size: 1.2rem;
+  }
+  &div--info h3 {
+    margin-bottom: 0;
+    font-size: 1.05rem;
+    font-weight: normal;
+    color: $mainBlackLight;
+  }
+  &div--actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 2.5rem;
+    width: 100%;
+    border-top: 1px solid #ccc;
+  }
+  &modal-content {
+    padding: 0;
+  }
+
+  &modal-actions {
+    text-align: right;
+  }
+  &button--action.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    height: 2rem;
+    background-color: #0000;
+    color: $secondaryBlack;
+    border: 1px solid $secondaryBlack;
+    width: fit-content;
+    height: auto;
+    min-height: 0;
+    border-radius: 3px;
+    margin: 0.4rem 0.5rem;
+    padding: 0.3rem 0.6rem;
+    &:hover {
+      background-color: #0001;
+    }
+    &.danger {
+      background-color: $dangerBackgroundColor;
+      color: $mainWhite;
+      &:hover {
+        background-color: $dangerBackgroundColorHover;
+      }
+    }
+  }
+  &button--action.img--btn {
+    border: none;
+    color: inherit;
+    background-color: none;
+    width: 1rem;
+    min-width: 0;
+    height: 1rem;
+    padding: 0;
+    margin: 0;
+    margin-right: 0.3rem;
+    border-radius: 0px;
+    &.danger {
+      filter: $whiteIconImageFilter;
     }
   }
 }
-
-.toy-item__button--action.img--btn {
-  border: none;
-  color: inherit;
-  background-color: none;
-  width: 1rem;
-  min-width: 0;
-  height: 1rem;
-  padding: 0;
-  margin: 0;
-  margin-right: 0.3rem;
-  border-radius: 0px;
-  &.danger {
-    filter: $whiteIconImageFilter;
-  }
-}
-
+/*
+//TODO: check if this works similarly to the mixin version
 @media screen and (min-width: 600px) {
   .toy-item {
     width: 40vw;
   }
 }
+*/
 
-@include media-md {
-  // custom version for a different page
+@include mqMinW(600px) {
+  .toy-item {
+    width: 40vw;
+  }
 }
 
 @include media-lg {
@@ -141,17 +132,19 @@
     width: 24vw;
     max-width: 16rem;
   }
-  .toy-item__div--popup {
-    z-index: 20;
-    position: absolute;
-    bottom: 0;
-    background-color: $mainWhite;
-    transition: opacity 0.3s ease;
-    visibility: hidden;
-    opacity: 0;
-    &.show {
-      visibility: visible;
-      opacity: 1;
+  .toy-item__ {
+    &div--popup {
+      z-index: 20;
+      position: absolute;
+      bottom: 0;
+      background-color: $mainWhite;
+      transition: opacity 0.3s ease;
+      visibility: hidden;
+      opacity: 0;
+      &.show {
+        visibility: visible;
+        opacity: 1;
+      }
     }
   }
 }

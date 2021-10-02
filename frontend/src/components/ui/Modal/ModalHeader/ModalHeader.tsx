@@ -2,9 +2,6 @@
 import React, { FC } from "react";
 // Non-package imports
 import CloseButton from "components/ui/buttons/CloseButton/CloseButton";
-import "./ModalHeader.scss";
-
-//note: test the use of context, remove  from the variables
 
 interface Props {
   headingText?: string;

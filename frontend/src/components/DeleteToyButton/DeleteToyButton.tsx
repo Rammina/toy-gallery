@@ -3,7 +3,6 @@ import React, { useState, FC, MouseEvent } from "react";
 // Non-package imports
 import DeleteToyForm from "components/forms/toy/DeleteToy/DeleteToy";
 import { Toy } from "appTypes";
-import "./DeleteToyButton.scss";
 import TrashImg from "assets/icons/trash.png";
 
 interface Props {

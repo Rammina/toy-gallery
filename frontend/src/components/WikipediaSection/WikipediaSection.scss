@@ -1,23 +1,22 @@
 @import "~styles/_variables";
-@import "~styles/_config";
+@import "~styles/_mixins";
 
-.wikipedia-section__section {
-  max-width: 55rem;
-  padding: 0 1rem;
-  padding-bottom: 3rem;
-}
-
-.wikipedia-section__h2 {
-}
-
-.wikipedia-section__div--item {
-  border-top: 1px solid #0001;
-  padding: 0.5rem 0rem;
-  & a {
-    text-decoration: underline;
+.wikipedia-section__ {
+  &section {
+    max-width: 55rem;
+    padding: 0 1rem;
+    padding-bottom: 3rem;
   }
-  & .wikipedia-section__p {
-    margin-top: 0.5rem;
+
+  &div--item {
+    border-top: 1px solid #0001;
+    padding: 0.5rem 0rem;
+    & a {
+      text-decoration: underline;
+    }
+    & .wikipedia-section__p {
+      margin-top: 0.5rem;
+    }
   }
 }
 

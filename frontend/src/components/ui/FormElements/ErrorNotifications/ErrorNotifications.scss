@@ -1,4 +1,5 @@
-@import "~styles/_variables.scss";
+@import "~styles/_variables";
+@import "~styles/_mixins";
 
 .error-notifications__div {
   width: 100%;
@@ -7,53 +8,58 @@
   margin-bottom: 0.5rem;
 }
 
-.error-notification__div {
-  display: flex;
-  border: 1px solid #f777;
-  background-color: #fddd;
-  color: #733;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  min-height: 3rem;
-  border-radius: 5px;
-  padding: 0.4rem 0.5rem;
-  transition: opacity 0.3s ease, visibility 0.01s ease 0.29s,
-    min-height 0.01s ease 0.29s, height 0.01s ease 0.29s;
+.error-notification__ {
+  &div {
+    display: flex;
+    border: 1px solid #f777;
+    background-color: #fddd;
+    color: #733;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-height: 3rem;
+    border-radius: 5px;
+    padding: 0.4rem 0.5rem;
+    transition: opacity 0.3s ease, visibility 0.01s ease 0.29s,
+      min-height 0.01s ease 0.29s, height 0.01s ease 0.29s;
+
+    &.hide {
+      visibility: hidden;
+      min-height: 0;
+      height: 0;
+      opacity: 0;
+    }
+  }
+  &div--text {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 0.4rem;
+  }
 }
 
-.error-notification__div.hide {
-  visibility: hidden;
-  min-height: 0;
-  height: 0;
-  opacity: 0;
+.server-side {
+  &.error__img {
+    display: none;
+  }
+  &.error.close-button {
+    margin: 0;
+    width: 2rem;
+    background-color: #0000;
+    color: #733;
+    font-size: 1.3rem;
+  }
 }
 
-.server-side.error__img {
-  display: none;
-}
-.error-notification__div--text {
-  display: flex;
-  align-items: center;
-  position: relative;
-  left: 0.4rem;
-}
-.server-side.error.close-button {
-  margin: 0;
-  width: 2rem;
-  background-color: #0000;
-  color: #733;
-  font-size: 1.3rem;
-}
-
-@media screen and (min-width: 400px) {
+@include mqMinW(400px) {
   .server-side.error__img {
     display: inline;
     top: 0;
   }
 }
 
+//TODO: make a mixin for combined media queries
 @media screen and (min-width: 750px) and (min-height: 700px) {
   .error-notifications__div {
     width: 90%;
