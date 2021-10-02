@@ -18,7 +18,6 @@ import { Field, ReduxInput, ReduxTextarea } from "redux/FormComponents/index";
 import { RootState } from "redux/reducers";
 import LoadingSpinner from "components/ui/loaders/LoadingSpinner";
 import { ModalReduxFormContext } from "AppContext";
-import "./EditToy.scss";
 
 interface Props {
   toy: Toy;

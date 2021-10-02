@@ -4,7 +4,6 @@ import React, { useState, FC, MouseEvent } from "react";
 import EditToyForm from "components/forms/toy/EditToy/EditToy";
 import { Toy } from "appTypes";
 import { ModalReduxFormContext } from "AppContext";
-import "./EditToyButton.scss";
 import WrenchImg from "assets/icons/wrench.png";
 
 interface Props {
