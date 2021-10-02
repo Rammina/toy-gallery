@@ -10,6 +10,6 @@ This contains the list of package dependencies to be used for the project, both 
 
 ## Backend DevDependencies
 
-[<< Go back to README]()
+[<< Go back to README](https://github.com/Rammina/toy-gallery#toy-gallery)
 
 [<< Go back to documentation links]()

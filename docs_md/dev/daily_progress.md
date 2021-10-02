@@ -156,6 +156,6 @@ This **loosely** follows the structure of a Daily SCRUM Meeting.
 - **Impediments:**
   - N/A
 
-[<< Go back to README]()
+[<< Go back to README](https://github.com/Rammina/toy-gallery#toy-gallery)
 
 [<< Go back to documentation links]()

@@ -77,6 +77,6 @@ https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#
 
 https://blog.anvileight.com/posts/how-to-create-a-perfect-user-story-step-by-step-guide/
 
-[<< Go back to README]()
+[<< Go back to README](https://github.com/Rammina/toy-gallery#toy-gallery)
 
 [<< Go back to documentation links]()

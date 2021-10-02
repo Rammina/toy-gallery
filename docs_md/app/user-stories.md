@@ -160,3 +160,5 @@ so I can **so that the user does not wonder if the application is broken when no
 Checklist:
 
 - []
+
+[<< Go back to README](https://github.com/Rammina/toy-gallery#toy-gallery)

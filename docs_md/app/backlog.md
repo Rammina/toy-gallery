@@ -69,6 +69,6 @@ Check the `Issues` tab on Github or the `Zenhub` tab to see which issues/tasks w
 
 ## Third Party API Integrations
 
-[<< Go back to README]()
+[<< Go back to README](https://github.com/Rammina/toy-gallery#toy-gallery)
 
 [<< Go back to documentation links]()

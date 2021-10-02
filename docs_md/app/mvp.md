@@ -20,7 +20,7 @@ The application must:
   - create a toy page
   - update their own toy pages
   - delete their own toy pages
-  - upload images of their toys inside a toy page  
+  - upload images of their toys inside a toy page
 - store any created and updated data in a database
 - retrieve data from the database and
 - change the state on the client side after retrieval
@@ -40,12 +40,12 @@ The application should:
 - have profile pages for users
 - allow users to choose a main "highlight" image to use for a toy page
 - images should look appropriate and adjust to of the file resolution dynamically
-- 
+-
 
 ## Nice-to-haves
 
 - UI/UX enhancements
 
-[<< Go back to README](https://github.com/Rammina/toy-gallery)
+[<< Go back to README](https://github.com/Rammina/toy-gallery#toy-gallery)
 
 [<< Go back to documentation links]()

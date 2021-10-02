@@ -34,6 +34,6 @@ ComponentName - description of what is contained
 
 `<ToySection />` - the section containing the toy in a toy page
 
-[<< Go back to README]()
+[<< Go back to README](https://github.com/Rammina/toy-gallery#toy-gallery)
 
 [<< Go back to documentation links]()
