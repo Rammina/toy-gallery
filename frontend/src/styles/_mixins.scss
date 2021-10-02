@@ -1,0 +1,61 @@
+//TODO: add more convenient mixins
+
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexColumn {
+  @extend %flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@mixin flexCenter {
+  @extend %flex;
+  justify-content: center;
+}
+
+@mixin mqMinW($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin mqMinH($size) {
+  @media screen and (min-height: $size) {
+    @content;
+  }
+}
+
+@mixin mqMaxW($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin mqMaxH($size) {
+  @media only screen and (max-height: $size) {
+    @content;
+  }
+}
+
+@mixin transition-ease {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}
