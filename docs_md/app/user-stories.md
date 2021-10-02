@@ -36,6 +36,7 @@ Checklist:
 As a **User**
 I want to **log in to my account easily** (probably e-mail or social media like Facebook or Google login)
 so I can **easily access the website and do the things I need**
+
 Checklist:
 []
 
