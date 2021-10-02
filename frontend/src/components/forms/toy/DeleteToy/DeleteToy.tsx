@@ -74,13 +74,13 @@ const DeleteToy: FC<Props> = ({ toy, onModalClose }) => {
       >
         <form onSubmit={onSubmitHandler}>
           <div className="delete-toy modal__div--content">
-            <p className="modal__modal-p delete-toy">
+            <p className="modal__p delete-toy">
               Are you sure you want to delete this toy?
             </p>
-            <p className="modal__modal-p delete-toy enlarged-text centered">
+            <p className="modal__p delete-toy enlarged-text centered">
               {toy.name}
             </p>
-            <p className="modal__modal-p small-text danger">
+            <p className="modal__p small-text danger">
               Warning: Deleted toys cannot be restored.
             </p>
 
