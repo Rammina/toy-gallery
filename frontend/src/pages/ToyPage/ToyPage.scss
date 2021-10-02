@@ -111,22 +111,23 @@
   }
 }
 
-.toy-page__section--flex {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 0.5rem;
-}
-
-.toy-page__div--details {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 35rem;
-  margin: 0.5rem auto;
-  padding: 0 0.75rem;
+.toy-page__ {
+  &section--flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0.5rem;
+  }
+  &div--details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 35rem;
+    margin: 0.5rem auto;
+    padding: 0 0.75rem;
+  }
 }
 
 p.toy-page__description {
@@ -145,31 +146,38 @@ p.toy-page__description {
     max-width: 23rem;
     margin: 0;
   }
-  .toy-page__div--details {
-    width: 52%;
-    max-width: 32rem;
-    justify-content: flex-start;
-    margin-right: 2rem;
-  }
-  .toy-page__details-and-action-container {
-    margin-top: 2.65rem;
-    border: 1px solid #0002;
-    background-color: $mainFgColor;
-    border-radius: 8px;
-    padding: 0.8rem;
-    height: fit-content;
-    align-self: flex-start;
-  }
-  .toy-page__actions-container {
-    margin-top: 0;
-    border-top: 0px solid #0000;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-  .toy-page__image {
-    width: 48vw;
-    height: 48vw;
-    max-height: 32rem;
+  .toy-page__ {
+    &div--details {
+      width: 52%;
+      max-width: 32rem;
+      justify-content: flex-start;
+      margin-right: 2rem;
+    }
+    &details-and-action-container {
+      margin-top: 2.65rem;
+      border: 1px solid #0002;
+      background-color: $mainFgColor;
+      border-radius: 8px;
+      padding: 0.8rem;
+      height: fit-content;
+      align-self: flex-start;
+    }
+    &actions-container {
+      margin-top: 0;
+      border-top: 0px solid #0000;
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+    &image {
+      width: 48vw;
+      height: 48vw;
+      max-height: 32rem;
+    }
+    &button {
+      padding: 0.5rem 1rem;
+      width: 100%;
+      margin-left: 0;
+    }
   }
   p.toy-page__description {
     width: 48vw;
@@ -184,18 +192,15 @@ p.toy-page__description {
   .toy-page__h1 {
     font-size: 1.8rem;
   }
-  .toy-page__button {
-    padding: 0.5rem 1rem;
-    width: 100%;
-    margin-left: 0;
-  }
 }
 
 @include media-lg {
-  .toy-page__h1 {
-    font-size: 2rem;
-  }
-  .toy-page__details-and-action-container {
-    margin-top: 2.85rem;
+  .toy-page__ {
+    &h1 {
+      font-size: 2rem;
+    }
+    &details-and-action-container {
+      margin-top: 2.85rem;
+    }
   }
 }

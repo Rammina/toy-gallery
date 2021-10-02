@@ -1,29 +1,28 @@
 @import "~styles/_variables";
 @import "~styles/_mixins";
 
-.validate-email {
-  &__p {
+.validate-email__ {
+  &p {
     margin-top: 1rem;
   }
-}
+  &message-container {
+    padding: 0 1rem;
+    max-width: 35rem;
+    margin: 0 auto;
+  }
 
-.validate-email__message-container {
-  padding: 0 1rem;
-  max-width: 35rem;
-  margin: 0 auto;
-}
-
-.validate-email__link {
-  background-color: #0000;
-  color: $secondaryBlack;
-  border: 2px solid $secondaryBlack;
-  padding: 0.5rem 2rem;
-  font-size: 1.1rem;
-  margin: 0 1rem;
-  margin-top: 1rem;
-  border-radius: 3px;
-  &:hover {
-    background-color: #0001;
+  &link {
+    background-color: #0000;
+    color: $secondaryBlack;
+    border: 2px solid $secondaryBlack;
+    padding: 0.5rem 2rem;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    margin-top: 1rem;
+    border-radius: 3px;
+    &:hover {
+      background-color: #0001;
+    }
   }
 }
 

@@ -5,29 +5,31 @@
   & h2 {
     color: $dangerTextColor;
   }
-  &__p {
+  &.button-container {
+    margin-top: 2rem;
+  }
+}
+
+.error-page__ {
+  &p {
     margin-top: 1rem;
   }
-}
 
-.error-page__message-container {
-  padding: 0 1rem;
-  max-width: 35rem;
-  margin: 0 auto;
-}
-
-.error-page__link {
-  background-color: #0000;
-  color: $secondaryBlack;
-  border: 2px solid $secondaryBlack;
-  padding: 0.5rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 3px;
-  &:hover {
-    background-color: #0001;
+  &message-container {
+    padding: 0 1rem;
+    max-width: 35rem;
+    margin: 0 auto;
   }
-}
 
-.error-page.button-container {
-  margin-top: 2rem;
+  &link {
+    background-color: #0000;
+    color: $secondaryBlack;
+    border: 2px solid $secondaryBlack;
+    padding: 0.5rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    &:hover {
+      background-color: #0001;
+    }
+  }
 }
