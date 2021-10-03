@@ -8,7 +8,12 @@ import ToyItem from "components/ToyItem/ToyItem";
 import CreateToyButton from "components/CreateToyButton/CreateToyButton";
 import SortToysButton from "components/SortToysButton/SortToysButton";
 import LoadingSpinner from "components/ui/loaders/LoadingSpinner";
-import { AppDispatch, ActionTypes, getToyList } from "redux/actions";
+import {
+  AppDispatch,
+  ActionTypes,
+  getToyList,
+  actionShowLoader,
+} from "redux/actions";
 import { RootState } from "redux/reducers";
 import { MapIndex, Toy } from "appTypes";
 import "./ToyListPage.scss";
@@ -26,8 +31,12 @@ const ToyListPage: FC = (): JSX.Element => {
   );
 
   const toys: Toy[] = useSelector((state: RootState) => state.toys);
+  const showLoader: boolean = useSelector(
+    (state: RootState) => state.loader.showToyListPageLoader
+  );
 
   const getToyListHandler = (): void => {
+    dispatch(actionShowLoader("toyListPage", true));
     dispatch(getToyList({ sortOrder, sortPropName, filter }));
   };
 
@@ -50,23 +59,36 @@ const ToyListPage: FC = (): JSX.Element => {
     <main className="toy-list-page page-container">
       <h1 className="toy-list-page__heading heading--main">Displayed Toys</h1>
       <section className="toy-list-page__section">
-        <div className="toy-list-page__section--action">
-          <CreateToyButton className="toy-list-page__create" text="Add Toy" />
-          <SortToysButton />
-        </div>
-        <ul className="toy-list-page__ul">
-          {/*render nothing if there are no toys, otherwise render the toys*/}
-          {!toys || toys.length < 1 ? (
+        {/*shows a loader while application is still retrieving the list of toys */}
+        {showLoader ? (
+          <div className="toy-list-page__div">
             <LoadingSpinner
               className="toy-list-page__loader"
-              showLoader={true}
+              showLoader={showLoader}
             />
-          ) : (
-            toys.map((toy: Toy, index: MapIndex) => (
-              <ToyItem toy={toy} key={index} />
-            ))
-          )}
-        </ul>
+          </div>
+        ) : (
+          <>
+            {/*show the entire page after retrieving the list of toys*/}
+            <div className="toy-list-page__section--action">
+              <CreateToyButton
+                className="toy-list-page__create"
+                text="Add Toy"
+              />
+              <SortToysButton />
+            </div>
+            <ul className="toy-list-page__ul">
+              {/*render nothing if there are no toys, otherwise render the toys*/}
+              {!toys || toys.length < 1 ? (
+                <h2 className="toy-list-page__heading">No toys were found.</h2>
+              ) : (
+                toys.map((toy: Toy, index: MapIndex) => (
+                  <ToyItem toy={toy} key={index} />
+                ))
+              )}
+            </ul>
+          </>
+        )}
       </section>
     </main>
   );

@@ -55,11 +55,15 @@ export const getToyList =
           type: ActionTypes.GET_TOY_LIST_SUCCESS,
           payload: toys,
         });
+
         dispatch(clearErrors());
       })
       // handle failure by logging and displaying a visual indicator
       .catch((err: AxiosError) => {
         errorHandler(dispatch, err, { type: ActionTypes.GET_TOY_LIST_FAIL });
+      })
+      .finally(() => {
+        dispatch(actionShowLoader("toyListPage", false));
       });
   };
 
