@@ -6,7 +6,7 @@ This application is an online toy gallery for users to showcase their action fig
 
 It is a full-stack application built using Typescript, React, Node.js, Koa, SCSS, and etc.
 
-LIVE LINK: https://toy-gallery.netlify.app/
+LIVE LINK: https://toy-gallery.vercel.app/
 
 ## Table of Contents
 
